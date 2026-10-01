@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#07130f" />
+    <meta name="description" content="Enter an Alberta LSD and open its location in maps." />
+    <title>Lease Locator</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Lease Locator</h1>
+      <p>Enter an Alberta LSD. Find it on maps.</p>
+      <form id="searchForm">
+        <fieldset aria-describedby="hint">
+          <legend>Legal land description</legend>
+          <input id="lsd" type="hidden" />
+          <div class="land-parts">
+            <label>LSD<input id="part0" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="10" required /></label><span aria-hidden="true">-</span>
+            <label>Section<input id="part1" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="10" required /></label><span aria-hidden="true">-</span>
+            <label>Township<input id="part2" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="56" required /></label><span aria-hidden="true">-</span>
+            <label>Range<input id="part3" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="10" required /></label><span aria-hidden="true">W</span>
+            <label>Meridian<input id="part4" inputmode="numeric" autocomplete="off" enterkeyhint="search" placeholder="4" required /></label>
+          </div>
+        </fieldset>
+        <small id="hint">Just type numbers. No leading zeros needed. Tap Next for a short part.</small>
+        <button id="nextPart" type="button">Next part</button>
+        <button type="submit">Find on maps</button>
+      </form>
+      <p id="error" role="alert"></p>
+      <section id="result" hidden aria-label="Location" aria-live="polite">
+        <h2 id="legalOut"></h2>
+        <div class="actions">
+          <a id="google" target="_blank" rel="noopener">Google Maps ↗</a>
+          <a id="apple" target="_blank" rel="noopener">Apple Maps ↗</a>
+        </div>
+        <p class="note">Pin shows the LSD centre, not the lease entrance.</p>
+      </section>
+      <section id="history" hidden aria-label="Recent searches">
+        <div class="history-heading"><h2>Recent searches</h2><button id="clearHistory" type="button">Clear</button></div>
+        <div id="historyItems"></div>
+      </section>
+      <footer>Data: <a href="https://geospatial.alberta.ca/titan/rest/services/base/alberta_township_system/MapServer/20">Government of Alberta ATS</a> · <a href="https://open.alberta.ca/licence">Open Government Licence – Alberta</a></footer>
+    </main>
+  </body>
+</html>
