@@ -18,10 +18,10 @@
           <legend>Legal land description</legend>
           <input id="lsd" type="hidden" />
           <div class="land-parts">
-            <label>LSD<input id="part0" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="10" required /></label><span aria-hidden="true">-</span>
-            <label>Section<input id="part1" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="10" required /></label><span aria-hidden="true">-</span>
-            <label>Township<input id="part2" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="56" required /></label><span aria-hidden="true">-</span>
-            <label>Range<input id="part3" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="10" required /></label><span aria-hidden="true">W</span>
+            <label>LSD<input id="part0" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="00" required /></label><span aria-hidden="true">-</span>
+            <label>Section<input id="part1" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="00" required /></label><span aria-hidden="true">-</span>
+            <label>Township<input id="part2" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="000" required /></label><span aria-hidden="true">-</span>
+            <label>Range<input id="part3" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="00" required /></label><span aria-hidden="true">W</span>
             <label>Meridian<input id="part4" inputmode="numeric" autocomplete="off" enterkeyhint="search" placeholder="4" required /></label>
           </div>
         </fieldset>
@@ -42,7 +42,6 @@
         <div class="history-heading"><h2>Recent searches</h2><button id="clearHistory" type="button">Clear</button></div>
         <div id="historyItems"></div>
       </section>
-      <footer>Data: <a href="https://geospatial.alberta.ca/titan/rest/services/base/alberta_township_system/MapServer/20">Government of Alberta ATS</a> · <a href="https://open.alberta.ca/licence">Open Government Licence – Alberta</a></footer>
     </main>
   </body>
 </html>
