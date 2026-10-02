@@ -26,9 +26,7 @@ button:disabled { opacity: .65; cursor: wait; }
 h2 { font: 600 1.1rem ui-monospace, monospace; margin: 0 0 16px; }
 .actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .actions a { background: #173b2b; color: #f4f8f5; }
-.note, footer { font-size: .75rem; color: #acbeb4; line-height: 1.5; }
-footer { margin-top: 48px; }
-footer a { color: inherit; }
+.note { font-size: .75rem; color: #acbeb4; line-height: 1.5; }
 #history { margin-top: 32px; }
 .history-heading { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
 .history-heading h2 { margin: 0; font: 600 .95rem system-ui, sans-serif; }
