@@ -1,11 +1,17 @@
 :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #07130f; color: #f4f8f5; }
 * { box-sizing: border-box; }
-body { margin: 0; }
-main { width: min(100%, 480px); margin: 10vh auto 0; padding: 24px; }
+body { margin: 0; min-height: 100vh; background: radial-gradient(ellipse at 50% 0, #1c3827 0, transparent 65%); }
+main { width: min(calc(100% - 32px), 480px); margin: 8vh auto 32px; padding: 32px 24px; background: #0b1a13; border: 1px solid #294133; border-radius: 24px; box-shadow: 0 24px 80px #0004; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand-mark { flex-shrink: 0; border-radius: 16px; box-shadow: 0 0 0 1px #345039; }
+.brand-region { color: #b4c69b; font-size: .63rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 6px; }
+.brand h1 { margin: 0; font-size: clamp(1.45rem, 6vw, 2rem); letter-spacing: -.055em; }
+.brand h1 span { color: #e6ff56; font-weight: 500; }
+.tagline { margin: 22px 0 0; font-size: .9rem; }
 h1 { font-size: 2rem; letter-spacing: -.04em; margin: 0 0 10px; }
 p { color: #acbeb4; line-height: 1.5; }
 form { margin-top: 32px; }
-fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+fieldset { border: 0; margin: 0 0 20px; padding: 0; min-width: 0; }
 legend { padding: 0; font-weight: 600; margin-bottom: 14px; }
 .land-parts { display: flex; align-items: end; gap: 4px; }
 .land-parts label { flex: 1; min-width: 0; margin: 0; font-size: .65rem; color: #acbeb4; }
@@ -19,6 +25,10 @@ small { display: block; color: #acbeb4; font-size: .75rem; margin: 10px 0 20px; 
 button, .actions a { display: block; width: 100%; border: 0; border-radius: 10px; padding: 16px; font: 700 1rem system-ui, sans-serif; text-align: center; text-decoration: none; cursor: pointer; }
 button { background: #e6ff56; color: #07130f; }
 button:disabled { opacity: .65; cursor: wait; }
+button, .actions a, input { transition: background-color .15s, border-color .15s, box-shadow .15s; }
+button[type="submit"] { box-shadow: 0 4px 18px #e6ff5610; }
+@media (hover: hover) { button[type="submit"]:hover:not(:disabled) { background: #f0ff97; } .actions a:hover, #nextPart:hover, #history button:hover { background: #234c36; } }
+input:focus { background: #152d20; border-color: #e6ff56; }
 :focus-visible { outline: 3px solid #e6ff56; outline-offset: 4px; }
 #error { color: #ffab9e; }
 #error:empty { display: none; }
@@ -35,4 +45,5 @@ h2 { font: 600 1.1rem ui-monospace, monospace; margin: 0 0 16px; }
 .history-row { display: flex; gap: 8px; margin-top: 8px; }
 .history-row button:first-child { text-align: left; font-family: ui-monospace, monospace; }
 .history-row button:last-child { width: 44px; flex-shrink: 0; }
-@media (max-width: 360px) { main { padding: 18px; } .actions { grid-template-columns: 1fr; } }
+@media (max-width: 360px) { main { padding: 24px 14px; margin-top: 24px; } .brand { gap: 10px; } .brand-mark { width: 48px; height: 48px; } .brand-region { font-size: .55rem; } .actions { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { button, .actions a, input { transition: none; } }

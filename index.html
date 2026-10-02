@@ -6,15 +6,24 @@
     <meta name="theme-color" content="#07130f" />
     <meta name="description" content="Enter an Alberta LSD and open its location in maps." />
     <title>Lease Locator</title>
+    <meta name="application-name" content="Lease Locator" />
+    <meta name="apple-mobile-web-app-title" content="Lease Locator" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
     <link rel="stylesheet" href="./styles.css" />
     <script src="./script.js" defer></script>
   </head>
   <body>
     <main>
-      <h1>Lease Locator</h1>
-      <p>Enter an Alberta LSD. Find it on maps.</p>
+      <header class="brand">
+        <img class="brand-mark" src="./favicon.svg" alt="" width="64" height="64" />
+        <div><div class="brand-region">Alberta · Legal land search</div><h1>Lease<span>Locator</span></h1></div>
+      </header>
+      <p class="tagline">Enter an Alberta LSD. Find it on maps.</p>
       <form id="searchForm">
-        <fieldset aria-describedby="hint">
+        <fieldset>
           <legend>Legal land description</legend>
           <input id="lsd" type="hidden" />
           <div class="land-parts">
