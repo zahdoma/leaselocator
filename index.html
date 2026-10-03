@@ -19,10 +19,8 @@
     <div class="page">
       <header class="site-header">
         <a class="brand" href="./" aria-label="Lease Locator home">
-          <svg viewBox="0 0 32 32" width="30" height="30" fill="none" aria-hidden="true"><rect x="3" y="3" width="26" height="26" rx="3" stroke="currentColor" stroke-width="1.5"/><path d="M3 12h26M3 21h26M12 3v26M21 3v26" stroke="currentColor"/><circle cx="16.5" cy="16.5" r="3" fill="currentColor"/></svg>
           Lease Locator
         </a>
-        <span class="header-note">Legal land lookup</span>
       </header>
       <main>
         <div class="intro">
@@ -37,14 +35,14 @@
               <fieldset aria-describedby="entryHelp">
                 <legend class="sr-only">Legal land description</legend>
                 <div class="land-parts">
-                  <label for="part0">LSD<input id="part0" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="1" required /><small>1–16</small></label><span aria-hidden="true">–</span>
-                  <label for="part1">Section<input id="part1" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="10" required /><small>1–36</small></label><span aria-hidden="true">–</span>
-                  <label for="part2">Township<input id="part2" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="56" required /><small>1–127</small></label><span aria-hidden="true">–</span>
-                  <label for="part3">Range<input id="part3" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="12" required /><small>1–36</small></label><span aria-hidden="true">W</span>
-                  <label for="part4">Meridian<input id="part4" inputmode="numeric" autocomplete="off" enterkeyhint="search" placeholder="4" required /><small>1–6</small></label>
+                  <label for="part0">LSD<input id="part0" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="00" required /><small>1–16</small></label><span aria-hidden="true">–</span>
+                  <label for="part1">Section<input id="part1" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="00" required /><small>1–36</small></label><span aria-hidden="true">–</span>
+                  <label for="part2">Township<input id="part2" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="000" required /><small>1–127</small></label><span aria-hidden="true">–</span>
+                  <label for="part3">Range<input id="part3" inputmode="numeric" autocomplete="off" enterkeyhint="next" placeholder="00" required /><small>1–36</small></label><span aria-hidden="true">W</span>
+                  <label for="part4">Meridian<input id="part4" inputmode="numeric" autocomplete="off" enterkeyhint="search" placeholder="0" required /><small>1–6</small></label>
                 </div>
               </fieldset>
-              <div class="entry-help"><p id="entryHelp">You can paste a full description, like <span class="nowrap">1-10-56-12W4.</span></p><button class="text-button" id="nextPart" type="button">Next part →</button></div>
+              <div class="entry-help"><p id="entryHelp">You can paste a full description, like <span class="nowrap">1-10-56-12W4.</span></p><button class="text-button" id="nextPart" type="button">Next part</button></div>
               <button id="findLocation" class="primary" type="submit">Find location</button>
               <p id="error" role="alert"></p>
               <p id="status" class="sr-only" role="status"></p>
@@ -54,15 +52,14 @@
               <div class="section-heading"><p class="eyebrow">Parcel found</p><span id="regionOut" class="region"></span></div>
               <h2 id="legalOut"></h2>
               <p id="coordinates"></p>
-              <div class="actions"><a id="google" target="_blank" rel="noopener">Google Maps ↗</a><a id="apple" target="_blank" rel="noopener">Apple Maps ↗</a></div>
-              <button id="copyCoordinates" class="text-button" type="button">Copy coordinates</button>
+              <div class="actions"><a id="google" target="_blank" rel="noopener">Open Google Maps</a><a id="apple" target="_blank" rel="noopener">Open Apple Maps</a></div>
+              <button id="copyCoordinates" class="text-button" type="button">Copy Coordinates</button>
               <p id="accuracy" class="note"></p>
               <p class="source">Source: <a id="sourceLink" target="_blank" rel="noopener"></a></p>
             </section>
             <section class="coverage" aria-labelledby="coverageTitle">
               <h2 id="coverageTitle">Coverage</h2>
               <dl><div><dt>W1 · W2 · W3</dt><dd>Saskatchewan</dd></div><div><dt>W4 · W5 · W6</dt><dd>Alberta</dd></div></dl>
-              <p>Searches use provincial survey parcels. Manitoba, BC and land east of the first meridian are not covered.</p>
             </section>
           </div>
           <aside id="history" aria-labelledby="historyTitle">
@@ -72,7 +69,7 @@
           </aside>
         </div>
       </main>
-      <footer><span>Lease Locator</span><p>Parcel centres, not lease entrances.</p><details><summary>Data &amp; privacy</summary><p>Lookups send the land description to Alberta ATS or TSASK’s public SaskGrid service. No account, GPS permission or analytics. Your last 30 successful descriptions stay in this browser.</p><p>Alberta data: Open Government Licence – Alberta. Saskatchewan: ISC SaskGrid 2020, served by TSASK. No endorsement is implied. Survey coverage and service availability may vary.</p></details></footer>
+      <footer>
     </div>
   </body>
 </html>
