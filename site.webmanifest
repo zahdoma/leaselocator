@@ -1,14 +1,24 @@
 {
   "name": "Lease Locator",
   "short_name": "Lease Locator",
-  "description": "Find Alberta legal land descriptions on maps.",
+  "description": "Find Alberta and Saskatchewan legal land descriptions on maps.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#07130f",
-  "theme_color": "#07130f",
+  "background_color": "#f5f4ef",
+  "theme_color": "#f5f4ef",
   "icons": [
-    { "src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
-    { "src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+    {
+      "src": "./icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
   ]
 }
